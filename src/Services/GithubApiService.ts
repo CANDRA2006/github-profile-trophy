@@ -22,7 +22,7 @@ import { requestGithubData } from "./request.ts";
 
 // Need to be here - Exporting from another file makes array of null
 export const TOKENS = [
-  Deno.env.get("GITHUB_TOKEN1"),
+  Deno.env.get("GITHUB_TOKEN1") ?? Deno.env.get("PAT_1"),
   Deno.env.get("GITHUB_TOKEN2"),
 ];
 
